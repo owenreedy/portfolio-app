@@ -10,7 +10,7 @@ const Home = () => {
       >
         <div className="hero-content d-flex align-items-center">
           <img
-            src="temp-profile-pic.jpg" // Replace with your profile picture URL
+            src={`${import.meta.env.BASE_URL}temp-profile-pic.jpg`} // Replace with your profile picture URL
             alt="Owen Reedy"
             className="profile-img me-4"
           />
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
         <div className="right-side">
           <img
-            src="temp-profile-pic.jpg" // Replace with your profile picture URL
+            src={`${import.meta.env.BASE_URL}temp-profile-pic.jpg`} // Replace with your profile picture URL
             alt="Owen Reedy"
             className="profile-img me-4"
           />

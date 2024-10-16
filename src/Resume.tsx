@@ -2,7 +2,7 @@ const Resume = () => {
   return (
     <div className="card" style={{ width: '70%', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
       <iframe
-        src="/resume.pdf"
+        src={`${import.meta.env.BASE_URL}resume.pdf`}
         title="Resume"
         width="100%"
         height="600px"
