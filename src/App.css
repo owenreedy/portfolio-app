@@ -1,0 +1,202 @@
+/* Global Styles */
+.main-content {
+  padding-top: 60px; /* Adjust based on your navbar height */
+}
+
+body {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #ffffff; /* Light gray background */
+  color: #0C2340;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #0C2340; /* Bootstrap primary color */
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #0C2340;
+}
+
+.split-container {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  height: 100vh; /* Full height of the viewport, adjust as needed */
+  margin-left: 30px;
+}
+
+.left-side, .right-side {
+  flex: 1; /* Evenly split the space between the two sides */
+  padding: 20px;
+}
+
+.left-side {
+  background-color: #ffffff; /* Light gray background for the left side */
+}
+
+.right-side {
+  background-color: #ffffff; /* Slightly darker gray background for the right side */
+}
+
+/* Hero Section */
+.hero {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #ffffff; /* Primary color background */
+  color: #0C2340;
+  height: 75vh;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  text-align: center; /* Center text */
+  padding: 0 20px; /* Optional: adds padding to the sides for mobile */
+}
+
+.profile-img {
+  width: 400px;
+  height: 500px;
+  border-radius: 10%; /* Makes the image circular */
+  object-fit: cover;  /* Ensures the image covers the circle properly */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-img:hover{
+  box-shadow: 0px 100px 200px rgba(0, 0, 0, 0.1);
+  transform: scale(1.3);
+}
+
+/* Social links styling */
+.social-links a {
+  display: inline-flex;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  color: #0C2340;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease;
+}
+
+.social-links a:hover {
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  color: #E87722; /* Change color on hover (Bootstrap warning color) */
+  transform: scale(1.3);
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+}
+
+/* Features Section */
+.features {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.features .col-md-4 {
+  margin-bottom: 30px;
+}
+
+.features h3 {
+  font-size: 1.5rem;
+  color: #0C2340;
+}
+
+.features p {
+  font-size: 1rem;
+  color: #0C2340;
+}
+
+/* Footer */
+.footer {
+  background-color: #343a40; /* Dark background */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Buttons Customization */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.card {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #0C2340;
+  margin: 2.5rem auto; /* Added */
+  float: none; /* Added */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+.card h1{
+  color: #0C2340;
+}
+
+.card P{
+  color: #0C2340;
+}
+
+.about {
+  color: #0C2340;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+  }
+
+  .features .col-md-4 {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,149 @@
+.navbar {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+  color: #0c2340;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .navbar-brand {
+  color: #0c2340 !important; /* Ensure text is white */
+  font-size: 4rem;
+  margin: 5px 5%;
+  pointer-events: none; 
+}
+
+.navbar-nav .nav-link {
+  color: #0c2340 !important;
+  font-size: 2rem;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #e87722 !important; /* Highlight active link with Bootstrap's warning color */
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+  background: #0c2340;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Longer transition for better debugging */
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.hamburger-menu.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; 
+}
+
+.hamburger-icon {
+  position: relative; /* Ensures absolute positioning of spans is relative to this container */
+  height: 24px;
+  width: 24px;
+}
+
+.hamburger-icon span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    top 0.3s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 2px; /* Position the top bar */
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 11px; /* Center the middle bar */
+  transform: translate(-50%, -50%);
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 18px; /* Position the bottom bar */
+}
+
+.hamburger-icon.open span:nth-child(1) {
+  top: 50%; /* Move to the center for the "X" formation */
+  transform: translate(-50%, -50%) rotate(45deg) scaleX(1.414);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0; /* Fade out the middle bar */
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  top: 50%; /* Move to the center for the "X" formation */
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(1.414);
+}
+
+.side-menu {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 30%; /* Adjust to cover half the screen */
+  background: #0c2340;
+  color: white;
+  transform: translateX(100%); /* Start hidden off the screen */
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu.open {
+  transform: translateX(0); /* Slide into view */
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.side-menu li {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.side-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.side-menu li a.active {
+  color: #e87722; /* Active link color */
+}
+
+.side-menu li:hover {
+  background-color: #333;
+  border-radius: 5px;
+}
